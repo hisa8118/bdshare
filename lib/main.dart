@@ -1,5 +1,4 @@
 import 'package:bdshare/picturecard.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:random_string/random_string.dart';
@@ -72,12 +71,13 @@ class _State extends State {
       appBar: AppBar(
         title: Text("CardList"),
         actions: <Widget>[
+          // Set Color
           IconButton(
-            icon: const Icon(Icons.settings),
+            icon: Icon(Icons.settings,color:Colors.white),
             onPressed: null,
           ),
           IconButton(
-            icon: const Icon(Icons.menu),
+            icon: Icon(Icons.menu,color:Colors.white),
             onPressed: null,
           ),
         ],
