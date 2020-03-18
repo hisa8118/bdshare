@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.black,
         accentColor: Colors.red[900],
         // Define the default font family.
-        // fontFamily: 'Georgia',
         fontFamily: 'Robot',
         // Define the default TextTheme. Use this to specify the default
         textTheme: TextTheme(
