@@ -41,6 +41,9 @@ class MyHomePage extends StatefulWidget {
   }
 }
 class _State extends State {
+  //------------------------------------------------------
+  // Add Card list
+  //------------------------------------------------------
   var _cardList = List<PictureCard>();
   @override
   void initState() {
@@ -77,6 +80,9 @@ class _State extends State {
               ),
             ],
           ),
+          //------------------------------------------------------
+          // Add Card list
+          //------------------------------------------------------
           body: Container(
             padding: EdgeInsets.all(8),
             child: ListView.builder(
