@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // Define the default brightness and colors.
         brightness: Brightness.light,
-        primaryColor: Colors.lightBlue[400],
-        accentColor: Colors.cyan[600],
+        primaryColor: Colors.red[400],
+        accentColor: Colors.red[600],
         // Define the default font family.
         // fontFamily: 'Georgia',
         fontFamily: 'Robot',
@@ -42,16 +42,16 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        // actions: <Widget>[
-        //   IconButton(
-        //     icon: const Icon(Icons.settings),
-        //     onPressed: null,
-        //   ),
-        //   IconButton(
-        //     icon: const Icon(Icons.menu),
-        //     onPressed: null,
-        //   ),
-        // ],
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: null,
+          ),
+        ],
       ),
       body: Center(
         child: Container(
@@ -68,25 +68,25 @@ class MyHomePage extends StatelessWidget {
         // child: FaIcon(FontAwesomeIcons.addressBook),
         // backgroundColor: Colors.pink,
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: const <BottomNavigationBarItem>[
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       title: Text('home'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.business),
-      //       title: Text('Business'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.school),
-      //       title: Text('School'),
-      //     ),
-      //   ],
-      //   currentIndex: 0,
-      //   selectedItemColor: Theme.of(context).accentColor,
-      //   onTap: null,
-      // ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            title: Text('Business'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            title: Text('School'),
+          ),
+        ],
+        currentIndex: 0,
+        selectedItemColor: Theme.of(context).accentColor,
+        onTap: null,
+      ),
     );
   }
 }
