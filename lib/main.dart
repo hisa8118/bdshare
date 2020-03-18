@@ -54,11 +54,37 @@ class MyHomePage extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Container(
-          // color: Theme.of(context).accentColor,
-          child: Text(
-            'Text with a background color',
-            style: Theme.of(context).textTheme.display3,
+        //--------------------------------------------
+        // Add Padding & Column
+        //--------------------------------------------
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                color: Colors.orange,
+                child: Text(
+                  'This is Display1 text This is Display1 text This is Display1 text This is Display1 text This is Display1 text ',
+                  style: Theme.of(context).textTheme.display1,
+                ),
+              ),
+              Container(
+                color: Colors.blue,
+                child: Text(
+                  'This is Display2 This is Display2 This is Display2 This is Display2',
+                  style: Theme.of(context).textTheme.display2,
+                ),
+              ),
+              Container(
+                color: Colors.red,
+                child: Text(
+                  'This is Display3',
+                  style: Theme.of(context).textTheme.display3,
+                ),
+              ),
+            ],
           ),
         ),
       ),
