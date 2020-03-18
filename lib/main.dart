@@ -29,17 +29,18 @@ class MyApp extends StatelessWidget {
           display1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
-      home: MyHomePage(
-      ),
+      home: MyHomePage(),
     );
   }
 }
+
 class MyHomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _State();
   }
 }
+
 class _State extends State {
   //------------------------------------------------------
   // Add Card list
@@ -64,29 +65,30 @@ class _State extends State {
     ));
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text("CardList"),
-            actions: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.settings),
-                onPressed: null,
-              ),
-              IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: null,
-              ),
-            ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("CardList"),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: null,
           ),
-          //------------------------------------------------------
-          // Add Card list
-          //------------------------------------------------------
-          body: Container(
-            padding: EdgeInsets.all(8),
-            child: ListView.builder(
-              itemCount: _cardList.length,
+          IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: null,
+          ),
+        ],
+      ),
+      //------------------------------------------------------
+      // Add Card list
+      //------------------------------------------------------
+      body: Container(
+        padding: EdgeInsets.all(8),
+        child: ListView.builder(
+          itemCount: _cardList.length,
           itemBuilder: (BuildContext context, int index) {
             return _cardList[index];
           },
