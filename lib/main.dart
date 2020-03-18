@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appName,
       theme: ThemeData(
-        // Define the default brightness and colors.
+      //------------------------------------------------------
+      // Change Color
+      //------------------------------------------------------
         brightness: Brightness.light,
         primaryColor: Colors.red[400],
         accentColor: Colors.red[600],
@@ -42,6 +44,9 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+      //------------------------------------------------------
+      // Add Appbar Icons 
+      //------------------------------------------------------
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.settings),
@@ -65,9 +70,14 @@ class MyHomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: null,
         // child: Icon(Icons.add),
+        //Can use AwesomeIcons 
+        //https://fontawesome.com/icons?from=io
         child: FaIcon(FontAwesomeIcons.addressBook),
         // backgroundColor: Colors.pink,
       ),
+      //------------------------------------------------------
+      // Add BottomNavi 
+      //------------------------------------------------------
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
