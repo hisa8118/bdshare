@@ -58,14 +58,14 @@ class MyHomePage extends StatelessWidget {
           // color: Theme.of(context).accentColor,
           child: Text(
             'Text with a background color',
-            style: Theme.of(context).textTheme.display1,
+            style: Theme.of(context).textTheme.display3,
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: null,
-        child: Icon(Icons.add),
-        // child: FaIcon(FontAwesomeIcons.addressBook),
+        // child: Icon(Icons.add),
+        child: FaIcon(FontAwesomeIcons.addressBook),
         // backgroundColor: Colors.pink,
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -83,7 +83,7 @@ class MyHomePage extends StatelessWidget {
             title: Text('School'),
           ),
         ],
-        currentIndex: 0,
+        currentIndex: 1,
         selectedItemColor: Theme.of(context).accentColor,
         onTap: null,
       ),
