@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +17,6 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.lightBlue[400],
         accentColor: Colors.cyan[600],
         // Define the default font family.
-        // fontFamily: 'Georgia',
         fontFamily: 'Robot',
         // Define the default TextTheme. Use this to specify the default
         textTheme: TextTheme(
@@ -42,20 +40,9 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        // actions: <Widget>[
-        //   IconButton(
-        //     icon: const Icon(Icons.settings),
-        //     onPressed: null,
-        //   ),
-        //   IconButton(
-        //     icon: const Icon(Icons.menu),
-        //     onPressed: null,
-        //   ),
-        // ],
       ),
       body: Center(
         child: Container(
-          // color: Theme.of(context).accentColor,
           child: Text(
             'Text with a background color',
             style: Theme.of(context).textTheme.display1,
@@ -65,28 +52,7 @@ class MyHomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: null,
         child: Icon(Icons.add),
-        // child: FaIcon(FontAwesomeIcons.addressBook),
-        // backgroundColor: Colors.pink,
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: const <BottomNavigationBarItem>[
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       title: Text('home'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.business),
-      //       title: Text('Business'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.school),
-      //       title: Text('School'),
-      //     ),
-      //   ],
-      //   currentIndex: 0,
-      //   selectedItemColor: Theme.of(context).accentColor,
-      //   onTap: null,
-      // ),
     );
   }
 }
