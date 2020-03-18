@@ -1,6 +1,8 @@
+import 'package:bdshare/picturecard.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:random_string/random_string.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // Define the default brightness and colors.
         brightness: Brightness.light,
-        primaryColor: Colors.red[400],
-        accentColor: Colors.red[600],
+        primaryColor: Colors.black,
+        accentColor: Colors.redAccent,
         // Define the default font family.
         // fontFamily: 'Georgia',
         fontFamily: 'Robot',
@@ -28,45 +30,66 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: MyHomePage(
-        title: appName,
       ),
     );
   }
 }
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  MyHomePage({Key key, @required this.title}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _State();
+  }
+}
+class _State extends State {
+  var _cardList = List<PictureCard>();
+  @override
+  void initState() {
+    _cardList.add(PictureCard(
+      'Image1',
+      'The best image in the world',
+      'https://unsplash.it/id/${randomNumeric(2)}/600/600',
+    ));
+    _cardList.add(PictureCard(
+      'Image2',
+      'The 2nd image in the world',
+      'https://unsplash.it/id/${randomNumeric(2)}/600/400',
+    ));
+    _cardList.add(PictureCard(
+      'Image3',
+      'The 3rd image in the world',
+      'https://unsplash.it/id/${randomNumeric(2)}/600/400',
+    ));
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: null,
+        return Scaffold(
+          appBar: AppBar(
+            title: Text("CardList"),
+            actions: <Widget>[
+              IconButton(
+                icon: const Icon(Icons.settings),
+                onPressed: null,
+              ),
+              IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: null,
+              ),
+            ],
           ),
-          IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: null,
-          ),
-        ],
-      ),
-      body: Center(
-        child: Container(
-          // color: Theme.of(context).accentColor,
-          child: Text(
-            'Text with a background color',
-            style: Theme.of(context).textTheme.display3,
-          ),
+          body: Container(
+            padding: EdgeInsets.all(8),
+            child: ListView.builder(
+              itemCount: _cardList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return _cardList[index];
+          },
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: null,
         // child: Icon(Icons.add),
         child: FaIcon(FontAwesomeIcons.addressBook),
-        // backgroundColor: Colors.pink,
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
