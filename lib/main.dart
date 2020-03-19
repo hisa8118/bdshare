@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Robot',
         // Define the default TextTheme. Use this to specify the default
         textTheme: TextTheme(
-          display3: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          display2: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          display1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+          headline3: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          headline2: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          headline1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
       home: MyHomePage(
@@ -63,7 +63,7 @@ class MyHomePage extends StatelessWidget {
           // color: Theme.of(context).accentColor,
           child: Text(
             'Text with a background color',
-            style: Theme.of(context).textTheme.display3,
+            style: Theme.of(context).textTheme.headline3,
           ),
         ),
       ),
