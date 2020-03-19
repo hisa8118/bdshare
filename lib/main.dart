@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Robot',
         // Define the default TextTheme. Use this to specify the default
         textTheme: TextTheme(
-          display3: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          display2: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          display1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+          headline3: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          headline2: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          headline1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
       home: MyHomePage(
@@ -66,22 +66,22 @@ class MyHomePage extends StatelessWidget {
               Container(
                 color: Colors.orange,
                 child: Text(
-                  'This is Display1 text This is Display1 text This is Display1 text This is Display1 text This is Display1 text ',
-                  style: Theme.of(context).textTheme.display1,
+                  'This is headline1 text This is headline1 text This is headline1 text This is headline1 text This is headline1 text ',
+                  style: Theme.of(context).textTheme.headline1,
                 ),
               ),
               Container(
                 color: Colors.blue,
                 child: Text(
-                  'This is Display2 This is Display2 This is Display2 This is Display2',
-                  style: Theme.of(context).textTheme.display2,
+                  'This is headline2 This is headline2 This is headline2 This is headline2',
+                  style: Theme.of(context).textTheme.headline2,
                 ),
               ),
               Container(
                 color: Colors.red,
                 child: Text(
-                  'This is Display3',
-                  style: Theme.of(context).textTheme.display3,
+                  'This is headline3',
+                  style: Theme.of(context).textTheme.headline3,
                 ),
               ),
             ],
